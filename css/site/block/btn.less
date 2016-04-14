@@ -1,0 +1,92 @@
+.btn-white-trans{
+	border: 1px solid @white;
+	background: none;
+	color: @white;
+	outline: none;
+	padding: 9px 18px;
+	.mixin-headings(
+		@font-family: @din-med, 
+		@font-size: 14px, 
+		@line-height: 24px, 
+		@color: @white);
+	transition: @transition-site;
+	&:hover,
+	&:focus{
+		background: @white;
+		color: @black;
+	}
+}
+.btn-search{
+	outline: none;
+	border: none;
+	background: none;
+	&:before{
+		display: block;
+		font-family: @icon;
+		content: @icon-search-light;
+		background: #0075b9;
+		border-radius: 0 10px 10px 0;
+		font-size: 15px;
+		width: 46px;
+		line-height: 42px;
+		color: @white;
+	}
+}
+.btn-red{
+	background-color:  #d32d26;
+	outline: none;
+	border: none;
+	color: @white;
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	font-size: 16px;
+	color: #fffefe;
+	padding: 10px;
+	border-radius: 25px;
+	transition: @transition-site;
+	&:hover,
+	&:focus{
+		color: #fffefe;
+		text-decoration: none;
+		background: #0370af;
+	}
+}
+.btn-red-border{
+	background-color: none;
+	outline: none;
+	border: 1px solid #d32d26;
+	color: @white;
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	font-size: 16px;
+	color: #d32d26;
+	padding: 10px;
+	border-radius: 25px;
+	transition: @transition-site;
+	&:hover,
+	&:focus{
+		color: #fffefe;
+		text-decoration: none;
+		background: #0370af;
+		border-color: #0370af;
+	}
+}
+.btn-form{
+	border: none;
+	outline: none;
+	background: #0075b9;
+	border-radius: 20px;
+	color: @white;
+    font-size: 16px;
+    line-height: 45px;
+    padding: 0 20px;
+	transition: @transition-site;
+	&:hover,
+	&:focus{
+		color: #fffefe;
+		text-decoration: none;
+		background: #0370af;
+	}
+}

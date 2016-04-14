@@ -1,3 +1,123 @@
 body {
-	#site.size(10px);
+	font-family: @agora-reg;
+	@media @media-size-xs {
+		padding-top: 90px;
+	}
+	@media @media-size-xs-l {
+		padding-top: 66px;
+	}
+	@media @media-size-sm {
+		padding-top: 96px;
+	}
+}
+a{
+	color: @blue;
+	&[href^="mailto:"],
+	&[href^="tel:"]{
+		text-decoration: none;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}
+div + p,
+p + p{
+	margin-bottom: 20px;
+}
+.snow-list{
+	list-style: none;
+	padding: 0;
+	li{
+		font-size: 16px;
+		color: lighten(@black, 20%);
+		padding-left: 25px;
+		position: relative;
+		margin-bottom: 7px;
+		&:before{
+			content: @icon-snow;
+			font-family: @icon;
+			color: rgb(46, 147, 208);
+			position: absolute;
+			left: 0px;
+		}
+		&:last-child{margin-bottom: 0}
+	}
+}
+.content-site{
+	background: rgb(255, 255, 255);
+	padding: 45px 0 50px;
+	&._second-page__content-site{
+		padding: 25px 0 50px;
+	}
+	@media @media-size-xs{
+		padding: 25px 0 30px;
+	}
+}
+._cs__flex{
+	display: flex;	
+	margin-left: @grid_margin;
+	margin-right: @grid_margin;
+	@media @media-size-xs{
+		flex-wrap: wrap;
+	}
+}
+._cs__col{
+	padding-left: @grid_padding;
+	padding-right: @grid_padding;
+}
+._cs__left{
+	width: 29%;
+	@media @media-size-xs{
+		width: 100%;
+	}
+	@media @media-size-sm-p{
+		width: 36%;
+	}
+	@media @media-size-sm-l{
+		width: 28%;
+	}
+	@media @media-size-md{
+		width: 33%;
+	}
+}
+._cs__right{
+	width: 71%;
+	@media @media-size-xs{
+		width: 100%;
+	}
+	@media @media-size-sm-p{
+		width: 64%;
+	}
+	@media @media-size-sm-l{
+		width: 72%;
+	}
+	@media @media-size-md{
+		width: 67%;
+	}
+}
+.search-site{
+	input{
+		height: 42px;
+		border-radius: 10px 0 0 10px;
+		&::-webkit-input-placeholder {
+			color: lighten(@black, 40%);
+		}
+		&:-moz-placeholder {
+			color: lighten(@black, 40%);
+		}
+		transition: @transition-site;
+		&:focus{
+			box-shadow: none;
+			border-color: #0075b9;
+			&::-webkit-input-placeholder {
+				color: #0075b9;
+			}
+			&:-moz-placeholder {
+				color: #0075b9;
+			}
+		}
+	}
+}
+.block-shadow{
+	box-shadow: inset 1px 2px 5px 0px rgba(0, 0, 1, 0.13);
 }

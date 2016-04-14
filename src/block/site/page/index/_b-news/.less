@@ -1,0 +1,21 @@
+.index-news-block{
+	//opacity: @opacity;
+	background: rgb(241, 241, 241);
+	padding: 20px 0;
+}
+._inb__flex{	
+	display: flex;	
+	margin-left: @grid_margin;
+	margin-right: @grid_margin;
+	@media @media-size-xs{
+		flex-wrap: wrap;
+	}
+}
+._inb__item{	
+	padding-left: @grid_padding;
+	padding-right: @grid_padding;
+	width: 33.33333%;
+	@media @media-size-xs{
+		width: 100%;
+	}
+}

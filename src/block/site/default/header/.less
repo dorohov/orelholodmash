@@ -1,0 +1,382 @@
+.header-site-block{
+	background: url('@{url-path-img}/bg-header.jpg') no-repeat center top;
+	//opacity: @opacity;
+	padding: 25px 0;
+	&.second-page{
+		background-position:  center -320px;
+		padding: 25px 0 20px;
+		@media @media-size-xs {
+			background-position: center top;
+		}
+	}
+}
+.header-site{
+	color: @header-color;
+	a{
+		color: inherit;
+		&:hover,
+		&:focus{
+			color: inherit;
+		}
+	}
+	@media @media-size-xs{
+		flex-wrap: wrap;
+		text-align: center;
+    	justify-content: center;
+		._hs__logotip{
+			display: none;
+		}
+	}
+	@media @media-size-sm{
+		._hs__logotip{
+			display: none;
+		}
+	}
+}
+._hs__top{
+	font-size: 15px;
+}
+._hs__flex{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	@media @media-size-sm{
+		flex-wrap: wrap;
+	}
+}
+._hs__logotip{
+	@media @media-size-xs{
+		padding: 15px 20px;
+		img{
+			max-width: 180px;
+		}
+	}
+	@media @media-size-xs-l{
+		img{
+			max-width: 120px;
+		}
+	}
+	@media @media-size-sm{
+		padding: 15px 20px;
+		img{
+			max-width: 180px;
+		}
+	}
+	@media @media-size-md{
+		img{
+			max-width: 180px;
+		}
+	}
+}
+._hs__address-block{
+	margin-top: 10px;
+	@media @media-size-xs{
+		margin-top: 15px;
+		width: 100%;
+	}
+	@media @media-size-sm{
+		width: 40%
+	}
+	@media @media-size-md{
+		font-size: 13px;
+	}
+}
+._hs__address{    
+	&:before{
+		font-family: @icon;
+		content: @icon-map-point;
+		font-size: 11px;
+		margin-right: 15px;
+	}
+}
+._hs__email{
+	&:before{
+		font-family: @icon;
+		content: @icon-mail;
+		font-size: 12px;
+    	margin-right: 15px;
+	}
+}
+._hs__phone-block{
+	margin-top: 10px;
+	@media @media-size-xs{
+		margin-top: 15px;
+		width: 100%;
+	}
+	@media @media-size-sm{
+		width: 35%
+	}
+}
+._hs__phone{
+	line-height: 22px;
+	a{
+		font-size: 18px;
+		font-family: @agora-bold;
+		@media @media-size-md{
+			font-size: 16px;
+		}
+	}
+}
+._hs__btn-consult{
+	margin-top: 7px;
+	@media @media-size-xs{
+		margin-top: 15px;
+		width: 100%;
+	}
+	@media @media-size-sm{
+		order: 1;
+		width: 100%;
+		text-align: center;
+    	margin: 20px 0;
+	}
+}
+._hs__link-group{
+	margin-top: 5px;
+	@media @media-size-xs{
+		margin-top: 15px;
+		width: 100%;
+	}
+	@media @media-size-sm{
+		width: 25%
+	}
+	@media @media-size-md{
+		font-size: 13px;
+	}
+}
+._hs__enter{
+	border: none;
+	background: none;
+	outline: none; 
+	span{
+		text-decoration: underline;   
+	}	
+	&:before{
+		font-family: @icon;
+		content: @icon-user;
+		font-size: 16px;
+		margin-right: 15px;
+		vertical-align: middle;
+		line-height: 16px;
+		text-decoration: none;
+	}
+	&:hover {
+		text-decoration: none;
+		span{
+			text-decoration: none;
+		}
+	}
+}
+._hs__map{
+	span{
+		text-decoration: underline;   
+	}	
+	&:before{
+		font-family: @icon;
+		content: @icon-map;
+		font-size: 16px;
+		margin-right: 15px;
+		vertical-align: middle;
+		line-height: 16px;
+	}
+	&:hover {
+		text-decoration: none;
+		span{
+			text-decoration: none;
+		}
+	}
+}
+._iph__slogan{	
+	.mixin-headings(
+		@font-family: @agora-thin, 
+		@font-size: 66px, 
+		@line-height: 80px, 
+		@color: @white);
+	text-shadow: 2px 4px 7px rgba(0, 0, 1, 0.28);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	min-height: 420px;
+	div{
+		&:after{
+			content: '';
+			height: 1px;
+			width: 155px;
+			background: @white;
+			display: block;
+			margin: 85px auto 0;
+		}
+	}
+	@media @media-size-xs{
+		font-size: 20px;
+		line-height: 34px;
+		min-height: inherit;
+		margin: 40px 0;
+		div{
+			&:after{display: none;}
+		}
+	}
+	@media @media-size-sm{
+		font-size: 46px;
+		line-height: 60px;
+	}
+}
+.navbar{
+	._hs__logotip{
+		display: none;
+		@media @media-size-xs{
+			display: block;    
+			overflow: hidden;
+    		width: 125px;
+		}
+		@media @media-size-xs-l{
+    		width: 90px;
+		}
+		@media @media-size-sm{
+			display: block;
+		}
+	}
+}
+/* -----------------------------------------------------------------------------
+
+  HAMBURGER ICONS COMPONENT
+  
+----------------------------------------------------------------------------- */
+/**
+ * Toggle Switch Globals
+ *
+ * All switches should take on the class `c-hamburger` as well as their
+ * variant that will give them unique properties. This class is an overview
+ * class that acts as a reset for all versions of the icon.
+ */
+.c-hamburger {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	width: 96px;
+	height: 96px;
+	font-size: 0;
+	text-indent: -9999px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	box-shadow: none;
+	border-radius: none;
+	border: none;
+	cursor: pointer;
+	transition: background 0.3s;
+	background: none;
+	@media @media-size-xs-l{
+		height: 66px;
+		width: 86px;
+	}
+	@media @media-screen{
+		display: none;
+	}
+	&:focus {
+		outline: none;
+	}
+	span {
+		display: block;
+		position: absolute;
+		top: 44px;
+		left: 18px;
+		right: 18px;
+		height: 8px;
+		background: @white;
+		&:before,
+		&:after {
+			position: absolute;
+			display: block;
+			left: 0;
+			width: 100%;
+			height: 8px;
+			background: @white;
+			content: "";
+		}
+		&:before{
+			top: -20px;
+		}
+		&:after {
+			bottom: -20px;
+		}
+
+		@media @media-size-xs-l{			
+			height: 5px;
+			top: 30px;
+			&:before,
+			&:after {
+				height: 5px;
+			}
+			&:before{
+				top: -17px;
+			}
+			&:after {
+				bottom: -17px;
+			}
+		}
+	}
+}
+
+/**
+ * Style 2
+ * 
+ * Hamburger to "x" (htx). Takes on a hamburger shape, bars slide
+ * down to center and transform into an "x".
+ */
+.c-hamburger--htx {
+  //background-color: #ff3264;
+}
+
+.c-hamburger--htx span {
+  -webkit-transition: background 0s 0.3s;
+          transition: background 0s 0.3s;
+}
+
+.c-hamburger--htx span::before,
+.c-hamburger--htx span::after {
+  -webkit-transition-duration: 0.3s, 0.3s;
+          transition-duration: 0.3s, 0.3s;
+  -webkit-transition-delay: 0.3s, 0s;
+          transition-delay: 0.3s, 0s;
+}
+
+.c-hamburger--htx span::before {
+          transition-property: top, 'transform';
+}
+
+.c-hamburger--htx span::after {
+  -webkit-transition-property: bottom, -webkit-transform;
+          transition-property: bottom, 'transform';
+}
+
+/* active state, i.e. menu open */
+.c-hamburger--htx.is-active {
+  //background-color: #cb0032;
+}
+
+.c-hamburger--htx.is-active span {
+  background: none;
+}
+
+.c-hamburger--htx.is-active span::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.c-hamburger--htx.is-active span::after {
+  bottom: 0;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.c-hamburger--htx.is-active span::before,
+.c-hamburger--htx.is-active span::after {
+  -webkit-transition-delay: 0s, 0.3s;
+          transition-delay: 0s, 0.3s;
+}
