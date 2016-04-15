@@ -18,6 +18,9 @@
 			._formS__input {
 			    width: 50%;
 			}
+			._formS__textarea {
+			    width: 90.5%;
+			}
 		}
 		@media @media-size-xs{
 			width: 100%;
@@ -54,6 +57,7 @@
 ._formS__input{
 	width: 80%;
 	select,
+	textarea,
 	input{
 		border-radius: 10px;
 		border: 1px solid #dddddd;
@@ -81,6 +85,9 @@
 	}
 	select{
 		padding: 0px 12px;
+	}
+	textarea{
+		height: 150px;
 	}
 	@media @media-size-xs{
 		width: 100%;
@@ -135,4 +142,7 @@
 		display: block;
 		margin: 0 auto;
 	}
+}
+._formS__link{
+	justify-content: flex-end;
 }

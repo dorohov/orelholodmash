@@ -53,7 +53,7 @@
 	}
 }
 .btn-red-border{
-	background-color: none;
+	background: none;
 	outline: none;
 	border: 1px solid #d32d26;
 	color: @white;
@@ -87,6 +87,38 @@
 	&:focus{
 		color: #fffefe;
 		text-decoration: none;
-		background: #0370af;
+		background: #d32d26;
+	}
+}
+.btn-form-border{
+	border: none;
+	outline: none;
+	background: none;
+	border: 1px solid #0075b9;
+	border-radius: 20px;
+	color: #0075b9;
+    font-size: 16px;
+    line-height: 45px;
+    padding: 0 20px;
+	transition: @transition-site;
+	&:hover,
+	&:focus{
+		color: @white;
+		text-decoration: none;
+		background: #0075b9;
+	}
+}
+.btn-link{
+	border:none;
+	outline: none;
+	background: none;
+	color: inherit;
+	font-size: 13px;
+	transition: @transition-site;
+	display: inline-block;
+	&:hover,
+	&:focus{
+		color: inherit;
+		text-decoration: underline;
 	}
 }

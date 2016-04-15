@@ -1,0 +1,152 @@
+.vacancy-content-block{
+	//opacity: @opacity;
+	@media @media-size-lg{
+		min-height: 775px;
+		background: @white url('@{url-path-img}/vacancy/bg-vacancy.png') no-repeat 89% bottom;
+	}	
+	@media (min-width: 1200px) and (max-width: 1585px){
+		background-position: 100% bottom;
+		background-size: 350px;
+	}
+}
+._vcb__heading-block{
+	margin-bottom: 10px;
+}
+._vcb__flex{
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+._vcb__spec-list{
+	list-style: none;
+	margin-bottom: 20px;
+	padding: 0;
+	> li{
+		margin-bottom: 10px;
+		> a{
+			font-size: 16px;
+			color: lighten(@black, 20%);
+			text-decoration: none;
+			transition: @transition-site;
+			&:hover{
+				color: @blue3;
+			
+			}
+		}
+		&.active{
+			> a{
+				color: @blue3;
+			}
+		}
+	}
+	@media @media-size-xs{
+		> li{
+			width: 100%;
+		}
+	}
+}
+._vcb__note{
+	font-size: 16px;
+	line-height: 24px;
+	@media @media-size-lg{
+		max-width: 83%;
+	}	
+}
+._vcb__appeal{	
+	.mixin-headings(
+		@font-family: @agora-light, 
+		@font-size: 24px, 
+		@line-height: 32px, 
+		@color: #0075b9
+	);
+	margin-top: 15px;
+}
+
+.vacancy-item-content-block{
+	//opacity: @opacity;
+}
+._vicb__panel-group{
+	margin-bottom: 80px;
+	@media @media-size-xs{
+		margin-bottom: 50px;
+	}
+}
+._vicb__panel{
+	margin-bottom: 30px!important;
+	border-radius: 0!important;
+	@media @media-size-xs{
+		margin-bottom: 20px!important;
+	}
+}
+._vicb__panel-title-block{
+	background-color:  #e5f8fe;
+	box-shadow: 2px 4px 5px 0px rgba(0, 0, 1, 0.07);
+	padding: 5px 20px 5px 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+	&[aria-expanded="true"]{
+		._vicb__icon{
+			&:before{
+				content: @icon-plus;
+			}
+		}
+	}
+	&[aria-expanded="false"]{
+		._vicb__icon{
+			&:before{
+				content: @icon-close;
+			}
+		}
+	}
+	@media @media-size-xs{
+		padding: 5px 20px;
+	}
+}
+._vicb__panel-title{
+	.mixin-headings(
+		@font-family: @agora-light, 
+		@font-size: 30px, 
+		@line-height: 42px, 
+		@color: lighten(@black, 20%)
+	);
+	margin: 0;
+	@media @media-size-xs{
+		font-size: 26px;
+		line-height: 38px;
+	}
+}
+._vicb__icon{
+	&:before{
+		font-family: @icon;
+		color: rgb(34, 137, 195);
+		font-size: 20px;
+		line-height: 20px;
+		display: block;
+	}
+}
+._vicb__panel-body{
+	padding: 35px 55px 15px;
+
+	.mixin-headings(
+		@font-family: @agora-light, 
+		@font-size: 16px, 
+		@line-height: 22px, 
+		@color: inherit
+	);
+	@media @media-size-xs{
+		padding: 20px 15px 15px;
+	}
+}
+._vicb__btn{
+	padding-bottom: 20px;
+	.btn-red-border{
+		margin: 0 auto;
+		width: 100%;
+		max-width: 200px;
+		line-height: 30px;
+	}
+	@media @media-size-xs{
+		padding: 0;
+	}
+}
