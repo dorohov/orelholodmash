@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>
+		[snp tpl="src/block/site/default/head/.html" ]
+	</head>
+	<body>	
+		<header class="header-site-block header-site__index-page second-pa">			
+			<div class="container">
+				[snp tpl="src/block/site/default/header/.html" class="navbar-site" ]
+			</div> 
+		</header>
+		[snp tpl="src/block/site/page/news/.html" class="news-content-block content-site _second-page__content-site" ] 
+
+		[snp tpl="src/block/site/default/footer/.html" class="footer-site" ]
+
+		[snp tpl="src/block/site/default/modal/enter.html" class="modal-site" ]
+		[snp tpl="src/block/site/default/modal/consultations.html" class="modal-site" ]
+		[snp tpl="src/block/site/default/modal/registration.html" class="modal-site" ] 
+	
+		<script>
+		  (function() {
+
+		    "use strict";
+
+		    var toggles = document.querySelectorAll(".c-hamburger");
+
+		    for (var i = toggles.length - 1; i >= 0; i--) {
+		      var toggle = toggles[i];
+		      toggleHandler(toggle);
+		    };
+
+		    function toggleHandler(toggle) {
+		      toggle.addEventListener( "click", function(e) {
+		        e.preventDefault();
+		        (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
+		      });
+		    }
+
+		  })();
+		</script>
+	</body>
+</html> 
