@@ -1,0 +1,50 @@
+.reviews-content-block{
+	//opacity: @opacity;
+	//min-height: 500px; 
+	padding-bottom: 70px!important;
+}
+._rcb__flex{
+	justify-content: space-between;
+	flex-wrap: wrap;
+	@media @media-size-lg{
+		margin-left: @grid_margin - 45px;
+		margin-right: @grid_margin - 45px;
+	}
+}
+._rcb__item{
+	width: 25%;
+	margin-bottom: 30px;
+	@media @media-size-xs{
+		width: 100%;
+	}
+	@media @media-size-lg{
+		//max-width: 220px;
+		padding-left: @grid_padding + 45px;
+		padding-right: @grid_padding + 45px;
+		margin-bottom: 80px;
+	}
+}
+._rcb__preview{
+	margin-bottom: 20px;
+}
+._rcb__heading{
+	font-size: 18px;
+	line-height: 20px;
+	color: @blue2;
+	margin-bottom: 5px;
+}
+._rcb__city{
+	font-family: @agora-light;
+	font-size: 16px;
+}
+._rcb__btn{
+	text-align: center;
+	[class^="btn-"]{
+		display: inline-block;    
+		padding: 0px 45px;
+		line-height: 48px;
+		border-radius: 50px;
+		color: lighten(@black, 20%);
+		&:hover, &:focus{color: @white}
+	}
+}
