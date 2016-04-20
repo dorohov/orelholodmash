@@ -1,0 +1,252 @@
+.about-content-block{
+	//opacity: @opacity;
+	//min-height: 500px; 
+	padding-bottom: 25px!important;
+	background: @white url('@{url-path-img}/bg-map.jpg') no-repeat left 170px;
+	.owl-carousel .owl-stage{
+		padding-bottom: 45px;
+		@media @media-size-xs{
+			padding-bottom: 0px;
+			padding-top: 55px;
+		}
+	}
+	.owl-nav{
+		.owl-prev{    
+			position: absolute;
+		    bottom: 0;
+		    transform: translateX(-50%);
+		    left: 40%;
+			&:before{
+				font-family: @icon;
+				content: @icon-arrows-left;
+				display: block;
+				color: #d8d8d8;
+				font-size: 47px;
+				line-height: 47px;
+				transition: @transition-site;
+			}
+			&:hover{
+				&:before{
+					color: @blue2;
+				}
+			}
+			@media @media-size-xs{
+				bottom: inherit;
+				top: 0px;
+		    	transform: translateX(0%);
+		    	left: 0;
+			}
+		}
+		.owl-next{		
+			position: absolute;
+		    bottom: 0%;
+		    transform: translateX(-50%);
+		    right: 40%;
+			&:before{
+				font-family: @icon;
+				content: @icon-arrows-right;
+				display: block;
+				color: #d8d8d8;
+				font-size: 47px;
+				line-height: 47px;
+				transition: @transition-site;
+			}
+			&:hover{
+				&:before{
+					color: @blue2;
+				}
+			}
+			@media @media-size-xs{
+				bottom: inherit;
+				top: 0px;
+		    	transform: translateX(0%);
+		    	right: 0;
+			}
+		}
+	}
+} 
+._acb__nav{
+	list-style: none;
+	font-size: 16px;
+	margin-bottom: 75px;
+	justify-content: space-between;
+	> li{
+		> a{
+			color: lighten(@black, 20%);
+		}
+		&.active{
+			> a{
+				color: @blue2;
+				text-decoration: none;
+			}
+		}
+	}
+	@media @media-size-xs{
+		margin-bottom: 30px;
+	}
+	@media @media-size-sm-p{
+		//flex-wrap: wrap;
+		margin-bottom: 30px;
+	}
+}
+._acb__nav-col{
+	//width: 33.3333%;
+	@media @media-size-xs{
+		width: 100%;
+		margin-bottom: 5px;
+		text-align: left;
+	}
+	@media @media-size-sm-p{
+		width: 33.3333%;
+	}
+}
+._acb__text{
+	font-size: 16px;
+	margin-bottom: 120px;
+	@media @media-size-xs{
+		margin-bottom: 50px;
+	}
+	@media @media-size-lg{
+		padding-left: 34.5%;
+	}
+}
+._acb__text-heading{
+	font-size: 24px;
+	font-family: inherit;
+	line-height: 30px;
+	margin-bottom: 20px;
+	color: lighten(@black, 20%);
+}
+._acb__text-btn{
+	margin-top: 30px;
+	.btn-form{
+		display: inline-block;
+		font-size: 14px;
+		line-height: 50px;
+		padding: 0 35px;
+		border-radius: 50px;
+	}
+}
+._hcb__item{
+	@media @media-size-xs{
+		//flex-wrap: wrap;
+	}
+}
+._hcb__col-left{
+	width: 50%;
+	position: relative;
+	@media @media-size-xs{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+}
+._hcb__col-right{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: 16px;
+	line-height: 22px;
+	@media @media-size-xs{
+		width: 100%;
+	}
+}
+._hcb__heading{
+	font-size: 30px;
+	margin-bottom: 15px;
+	@media @media-size-xs{
+		font-size: 24px;
+	}
+}
+._hcb__heading-block{
+	@media @media-size-xs{
+		margin-bottom: 15px;
+	}
+
+}
+/*
+._hcb__item-year{
+	.mixin-headings(
+		@font-family: @intro-black, 
+		@font-size: 90px, 
+		@line-height: 80px, 
+		@color: #0c80c3
+	); 
+	position: absolute;
+	top: 0;
+	right: 0;
+}*/
+//============
+.about-slider-block{
+	//opacity: @opacity;
+	//min-height: 500px;
+	background-color:  #f1f1f1;
+	padding: 10px 0 30px;
+}
+._asb__item{
+	display: inline-block;
+	img{
+		margin: 0 auto 35px;
+	}
+	@media @media-size-xs{
+		display: block;
+	}
+}
+._asb__carousel{
+	.owl-stage{
+		padding-bottom: 45px;
+	}
+	.owl-nav{
+		.owl-prev{    
+			position: absolute;
+		    bottom: 0;
+		    //transform: translateY(-120%);
+		    left: 0;
+			&:before{
+				font-family: @icon;
+				content: @icon-arrows-left;
+				display: block;
+				color: @blue2;
+				font-size: 47px;
+				line-height: 47px;
+				transition: @transition-site;
+			}
+			&:hover{
+				&:before{
+					color: #d32d26;
+				}
+			}
+	   		@media @media-size-sm-l{
+	   			left: -20px;
+	   		}
+	   		@media @media-size-md{
+	   			left: -20px;
+	   		}
+		}
+		.owl-next{		
+			position: absolute;
+		    bottom: 0;
+		    right: 0;
+			&:before{
+				font-family: @icon;
+				content: @icon-arrows-right;
+				display: block;
+				color: @blue2;
+				font-size: 47px;
+				line-height: 47px;
+				transition: @transition-site;
+			}
+			&:hover{
+				&:before{
+					color: #d32d26;
+				}
+			}
+	   		@media @media-size-sm-l{
+	   			right: -20px;
+	   		}
+	   		@media @media-size-md{
+	   			right: -20px;
+	   		}
+		}
+	}
+}
