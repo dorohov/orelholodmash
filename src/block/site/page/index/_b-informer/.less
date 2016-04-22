@@ -33,6 +33,9 @@
 		padding-top: 15px;
 		padding-bottom: 15px;
 	}
+	@media @media-size-xs-6-l{
+		width: 50%;
+	}
 	@media @media-size-sm-p{
 		width: 33.3333%;
 		text-align: center;
@@ -83,11 +86,16 @@
 			font-size: 40px;
 		}
 	}
-	&:hover,
-	&:focus{		
+	&:hover{		
 		&:before{
 			background: @white;
 			color: rgb(0, 117, 185);
+		}
+	}
+	&:focus{		
+		&:before{
+			background: none;
+			color: @white;
 		}
 	}
 

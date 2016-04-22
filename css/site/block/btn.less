@@ -10,10 +10,13 @@
 		@line-height: 24px, 
 		@color: @white);
 	transition: @transition-site;
-	&:hover,
-	&:focus{
+	&:hover{
 		background: @white;
 		color: @black;
+	}
+	&:focus{
+		background: none;
+		color: @white;
 	}
 }
 .btn-search{
@@ -59,18 +62,22 @@
 	padding: 10px;
 	border-radius: 25px;
 	transition: @transition-site;
-	&:hover,
-	&:focus{
+	&:hover{
 		color: #fffefe;
 		text-decoration: none;
 		background: #0370af;
+	}
+	&:focus{
+		color: #fffefe;
+		text-decoration: none;
+		background-color:  #d32d26;
 	}
 }
 .btn-red-border{
 	background: none;
 	outline: none;
 	border: 1px solid #d32d26;
-	color: @white;
+	//color: @white;
 	text-decoration: none;
 	display: block;
 	text-align: center;
@@ -79,12 +86,17 @@
 	padding: 10px;
 	border-radius: 25px;
 	transition: @transition-site;
-	&:hover,
-	&:focus{
+	&:hover{
 		color: #fffefe;
 		text-decoration: none;
 		background: #0370af;
 		border-color: #0370af;
+	}
+	&:focus{
+		color: #d32d26;
+		text-decoration: none;
+		background: none;
+		border-color: #d32d26;
 	}
 }
 .btn-form{
@@ -97,11 +109,15 @@
     line-height: 45px;
     padding: 0 20px;
 	transition: @transition-site;
-	&:hover,
-	&:focus{
+	&:hover{
 		color: #fffefe;
 		text-decoration: none;
 		background: #d32d26;
+	}
+	&:focus{
+		color: @white;
+		text-decoration: none;
+		background: #0075b9;
 	}
 }
 .btn-form-border{
@@ -115,11 +131,15 @@
     line-height: 45px;
     padding: 0 20px;
 	transition: @transition-site;
-	&:hover,
-	&:focus{
+	&:hover{
 		color: @white;
 		text-decoration: none;
 		background: #0075b9;
+	}
+	&:focus{
+		color: #0075b9;
+		text-decoration: none;
+		background: none;
 	}
 }
 .btn-link{

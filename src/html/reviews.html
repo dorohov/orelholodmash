@@ -8,6 +8,28 @@
 		<script src="/plugins/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
 		<script src="/plugins/fancybox/source/jquery.fancybox.js?v=2.1.4"></script>
 		<script src="/plugins/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+		<script>
+			$(document).ready(function() {
+				$('.fancybox').fancybox(); 
+					// конструкция для активации fancybox <a class="fancybox-buttons" data-fancybox-group="button" href="" data-title=""><img src="" alt="" /></a>
+					$('.fancybox-buttons').fancybox({
+						openEffect  : 'none',
+						closeEffect : 'none',
+						prevEffect : 'none',
+						nextEffect : 'none',
+						closeBtn  : false,
+						helpers : {
+							title : {
+								type : 'inside'
+							},
+							buttons	: {}
+						},
+						afterLoad : function() {
+							this.title = this.title;
+						}	
+					});
+			})
+		</script>
 	</head>
 	<body>	
 		<header class="header-site-block header-site__index-page second-pa">			
@@ -22,7 +44,7 @@
 		[snp tpl="src/block/site/default/modal/enter.html" class="modal-site" ]
 		[snp tpl="src/block/site/default/modal/consultations.html" class="modal-site" ]
 		[snp tpl="src/block/site/default/modal/registration.html" class="modal-site" ] 
-	
+
 		<script>
 		  (function() {
 

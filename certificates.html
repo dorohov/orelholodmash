@@ -21,6 +21,7 @@
 <script src="/js/jquery.min.js" ></script>
 
 <script src="/js/bootstrap.min.js" ></script>
+<script src="/js/jquery.bootstrap-autohidingnavbar.min.js" ></script>
 <script src="/js/storage.js" ></script>
 <script src="/js/device.min.js" ></script>
 
@@ -31,6 +32,28 @@
 		<script src="/plugins/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
 		<script src="/plugins/fancybox/source/jquery.fancybox.js?v=2.1.4"></script>
 		<script src="/plugins/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+		<script>
+			$(document).ready(function() {
+				$('.fancybox').fancybox(); 
+					// конструкция для активации fancybox <a class="fancybox-buttons" data-fancybox-group="button" href="" data-title=""><img src="" alt="" /></a>
+					$('.fancybox-buttons').fancybox({
+						openEffect  : 'none',
+						closeEffect : 'none',
+						prevEffect : 'none',
+						nextEffect : 'none',
+						closeBtn  : false,
+						helpers : {
+							title : {
+								type : 'inside'
+							},
+							buttons	: {}
+						},
+						afterLoad : function() {
+							this.title = this.title;
+						}	
+					});
+			})
+		</script>
 	</head>
 	<body>	
 		<header class="header-site-block header-site__index-page second-pa">			
@@ -52,7 +75,7 @@
 	</div>
 	<div class="_hs__link-group">
 		<div><button type="button" class="_hs__enter" data-toggle="modal" data-target="#modal-form-enter"><span>Войти на сайт<span></button></div>
-		<div><a href="#" class="_hs__map"><span>Схема проезда</span></a></div>
+		<div><a href="/contacts.html" class="_hs__map"><span>Схема проезда</span></a></div>
 	</div>
 </div> 
 <nav class="navbar navbar-default">
@@ -229,14 +252,14 @@
 				<div class="_fs__nav-item">
 					<ul>
 						<li class="disabled">Каталог продукции</li>
-						<li><a href="#">Воздухоохладители</a></li>
-						<li><a href="#">Испарительные конденсаторы</a></li>
-						<li><a href="#">Системы подготовки ледяной воды</a></li>
-						<li><a href="#">Чиллеры</a></li>
-						<li><a href="#">Теплообменники пластинчатые</a></li>
-						<li><a href="#">Оребрённая труба и батареи</a></li>
-						<li><a href="#">Панели теплообменные из нержавеющей стали</a></li>
-						<li><a href="#">Ремкомплекты</a></li>
+						<li><a href="/catalog.html">Воздухоохладители</a></li>
+						<li><a href="/catalog.html">Испарительные конденсаторы</a></li>
+						<li><a href="/catalog.html">Системы подготовки ледяной воды</a></li>
+						<li><a href="/catalog.html">Чиллеры</a></li>
+						<li><a href="/catalog.html">Теплообменники пластинчатые</a></li>
+						<li><a href="/catalog.html">Оребрённая труба и батареи</a></li>
+						<li><a href="/catalog.html">Панели теплообменные из нержавеющей стали</a></li>
+						<li><a href="/catalog.html">Ремкомплекты</a></li>
 					</ul>
 				</div>
 				<div class="_fs__nav-item">
@@ -284,7 +307,7 @@
 					<div class="_hs__phone"><a href="tel:+74862417200">+7 (4862) 417-200</a></div>
 				</div>
 				<div class="_fs__map">
-					<a href="#">Схема проезда</a>
+					<a href="/contacts.html">Схема проезда</a>
 				</div>
 				<div class="_fs__dorohovdesign">
 					<a href="http://www.dorohovdesign.ru/" target="_blank">Создание сайта</a>

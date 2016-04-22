@@ -138,6 +138,13 @@
 	@media @media-size-xs{
 		width: 100%;
 		margin-bottom: 20px;
+		img{
+			max-width: 200px;
+			margin: 0 auto;
+		}
+	}
+	@media @media-size-xs-6-l{
+		width: 40%;
 	}
 }
 ._hcb__col-right{
@@ -149,6 +156,9 @@
 	line-height: 22px;
 	@media @media-size-xs{
 		width: 100%;
+	}
+	@media @media-size-xs-6-l{
+		width: 60%;
 	}
 }
 ._hcb__heading{
@@ -189,7 +199,25 @@
 		margin: 0 auto 35px;
 	}
 	@media @media-size-xs{
-		display: block;
+		display: block;	
+	}
+	@media @media-size-xs-6-l{
+		//display: block;
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: @grid_margin;
+		margin-right: @grid_margin;
+		> div{
+			width: 33.3333%;
+			padding-left: @grid_padding;
+			padding-right: @grid_padding;
+			&:nth-child(4){
+				width: 50%;
+			}
+			&:last-child{
+				width: 50%;
+			}
+		}
 	}
 }
 ._asb__carousel{

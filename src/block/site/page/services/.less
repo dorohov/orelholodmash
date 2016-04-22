@@ -2,6 +2,9 @@
 	//opacity: @opacity;
 	//min-height: 500px; 
 	padding-bottom: 70px!important;
+	@media @media-size-xs-6-l{
+		padding-bottom: 20px!important;
+	}
 }
 ._srcb__heading-block{
 	margin-bottom: 10px;
@@ -32,6 +35,9 @@
 		width: 100%;
 		margin-bottom: 5px;
 		text-align: left;
+	}
+	@media @media-size-xs-6-l{
+		width: 50%;
 	}
 	@media @media-size-sm-p{
 		width: 33.3333%;
@@ -86,6 +92,9 @@
 	@media @media-size-xs{
 		width: 100%;
 	}
+	@media @media-size-xs-6-l{
+		width: 50%;
+	}
 	@media @media-size-sm-p{
 		width: 50%;
 	}
@@ -125,6 +134,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    cursor: pointer;
     &:before{
     	content: '';
     	border-top:@srcb-port solid fadeout(@srcb-grey, 100%);
@@ -158,7 +168,11 @@
 		br{
 			display: none;
 		}
-	}   
+	} 
+	@media @media-size-xs-6-l{
+		font-size: 18px;
+    	line-height: 22px;
+	}  
 	@media @media-size-sm-l{
 		font-size: 22px;
 	}
@@ -176,12 +190,51 @@
 ._srcb__item-icon{
 	&:before{
 		font-family: @icon;
-		content: @icon-plus;
 		display: block;
 		color: @blue2;
 		font-size: 20px;
 		line-height: 20px;
 	}
+}
+._srcb__item-inner{
+	&[aria-expanded="false"]{
+		._srcb__item-icon{
+			&:before{
+				content: @icon-plus;
+			}
+		}
+	}
+	&[aria-expanded="true"]{
+		._srcb__item-icon{
+			&:before{
+				content: @icon-close;
+			}
+		}
+	}
+}
+._srcb__dropdown-menu{
+	border: none;
+	margin: 0;
+	background: @srcb-grey;
+	border-radius: 0;
+	font-size: 16px;
+	line-height: 22px;
+	color: lighten(@black, 20%);	
+    padding: 30px;
+    //max-width: 340px;
+    box-shadow: none;
+    /*@media @media-size-xs{
+    	max-width: 304px;
+    }
+    @media @media-size-xs-l{
+    	max-width: 277px;
+    }
+    @media @media-size-sm{
+    	max-width: 320px;
+    }
+    @media @media-size-sm-l{
+    	max-width: 274px;
+    }*/
 }
 ._srcb__step-col{
 	&:nth-child(2n+2){		
@@ -208,6 +261,9 @@
 		}
 		._srcb__item-num{
 			color: @srcb-blue;
+		}
+		._srcb__dropdown-menu{
+			background: @srcb-blue;			
 		}
 	}
 	&:last-child{
