@@ -1,3 +1,10 @@
+.modal-site{
+	@media @media-size-sm-p{
+		.modal-dialog{
+			width: 700px;
+		}
+	}
+}
 .form-modal{
 	display: flex;
 	flex-wrap: wrap;
@@ -44,6 +51,12 @@
 	color: lighten(@black, 60%);
 	font-size: 13px;
 	font-weight: normal;
+	&[for="firm"]{
+		word-wrap: break-word;
+	}
+	@media @media-size-sm-p{
+		word-wrap: break-word;
+	}
 	@media @media-size-xs{
 		width: 100%;
 		margin: 0 0 5px;
