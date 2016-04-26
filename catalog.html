@@ -268,7 +268,7 @@
 						<div class="_icb__price-btn _catalogP__price-btn">
 							<a href="#" data-toggle="modal" data-target="#modal-form-calc" class="btn-red-border">Подобрать оборудование</a>
 						</div>
-						<div class="_icb__price-btn _catalogP__price-btn"><a href="#" class="btn-red">Оставить заявку на покупку</a></div>
+						<div class="_icb__price-btn _catalogP__price-btn"><a href="#" class="btn-red" data-toggle="modal" data-target="#modal-form-bay">Оставить заявку на покупку</a></div>
 					</div>
 				</div>
 			</div>
@@ -870,6 +870,53 @@
 					</div>
 					<div class="tab-pane fade" id="calc-item4">...</div>
 				</div>
+			</div>
+		</div>
+	</div>
+</div> 
+		<div class="modal fade modal-site buy-block" id="modal-form-bay" tabindex="-1"  >
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Заявка на покупку</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+			<div class="modal-body">
+				<form action="" class="form-modal">
+					<div class="form-group"> 
+						<label for="fio" class="_formS__label">Контактное лицо</label>
+						<div class="_formS__input">
+							<input type="text" class="form-control" id="fio" placeholder="Введите ваше имя">
+						</div>
+					</div>
+					<div class="form-group"> 
+						<label for="firm" class="_formS__label">Организация</label>
+						<div class="_formS__input">
+							<input type="text" class="form-control" id="firm" placeholder="Введите название организации">
+						</div>
+					</div>
+					<div class="form-group"> 
+						<label for="tel" class="_formS__label">E-mail или телефон</label>
+						<div class="_formS__input">
+							<input type="text" class="form-control" id="tel" placeholder="Введите ваш E-mail или телефон">
+						</div>
+					</div>
+					<div class="form-group"> 
+						<label for="post" class="_formS__label">Должность</label>
+						<div class="_formS__input">
+							<input type="text" class="form-control" id="post" placeholder="Введите вашу должность">
+						</div>
+					</div>
+					<div class="form-group full"> 
+						<label for="note" class="_formS__label">Коментарий</label>
+						<div class="_formS__input _formS__textarea">
+							<textarea id="note" class="form-control" placeholder="Коментарий к заказу"></textarea>
+						</div>
+					</div>
+					<div class="_formS__btn">
+						<button type="submit" class="btn-form btn-zakaz">Заказать</button>
+					</div>					
+				</form>	
 			</div>
 		</div>
 	</div>
