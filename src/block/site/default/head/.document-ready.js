@@ -26,5 +26,22 @@ if (device.mobile() || device.tablet()) {
 	$('.navbar').addClass('navbar-fixed-top');
 } else {
 	$('.navbar').removeClass('navbar-fixed-top');
+
+	$("._iib__item").hover(
+		function(){
+			$(this).addClass('open');
+		},
+		function(){
+			$(this).removeClass('open');
+		}
+	);
+	$(".navbar-default .dropdown").hover(
+		function(){
+			$(this).addClass('open');
+		},
+		function(){
+			$(this).removeClass('open');
+		}
+	);
 }
 $("nav.navbar-fixed-top").autoHidingNavbar();

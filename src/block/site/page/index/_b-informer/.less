@@ -14,6 +14,7 @@
 	justify-content: space-around;
 	margin-left: @grid_margin;
 	margin-right: @grid_margin;
+	position: relative;
 	@media @media-size-xs{
 		flex-wrap: wrap;
 		padding: 20px 0;
@@ -98,10 +99,16 @@
 			color: @white;
 		}
 	}
-
 }
 ._iib__item{
+	@media @media-screen{
+		position: static;
+	}
 	&.open{
+		/*._iib__dropdown-menu{			
+			top: -100%;
+			z-index: 100;
+		}*/
 		._iib__dropdown-toggle{
 			&:before{
 				background: @white;
@@ -117,9 +124,51 @@
 				left: inherit;
 				right: 0;
 				&:before{
-	    			left: inherit;
-	    			right: 10%;
+	    			//left: inherit;
+	    			//right: 10%;
 
+				}
+			}
+		}
+		&:nth-child(1){
+			._iib__dropdown-menu{
+				&:before{
+	    			left: 8%;
+				}
+			}
+		}
+		&:nth-child(2){
+			._iib__dropdown-menu{
+				&:before{
+	    			left: 26%;
+				}
+			}
+		}
+		&:nth-child(3){
+			._iib__dropdown-menu{
+				&:before{
+	    			left: 43.5%;
+				}
+			}
+		}
+		&:nth-child(4){
+			._iib__dropdown-menu{
+				&:before{
+	    			left: 61.5%;
+				}
+			}
+		}
+		&:nth-child(5){
+			._iib__dropdown-menu{
+				&:before{
+	    			left: 77.5%;
+				}
+			}
+		}
+		&:nth-child(6){
+			._iib__dropdown-menu{
+				&:before{
+	    			left: 91.5%;
 				}
 			}
 		}
@@ -164,20 +213,36 @@
 }
 ._iib__dropdown-menu{
 	min-width: inherit;
-	width: 1000%;
-	max-width: 500px;
-	border-radius: 0;
-	border-color: rgb(46, 147, 208);    
-    border-top:0;
-    padding: 25px; 
+	margin: 0;
+	border-radius: 0; 
+    padding: 25px;    
 	&:before{
 		content: '';
-		border-bottom: 16px solid @white;
-		border-left: 10px solid fadeout(@white, 100%);
-		border-right: 10px solid fadeout(@white, 100%);
+		border-left: 16px solid fadeout(@white, 100%);
+		border-right: 16px solid fadeout(@white, 100%);
 		position: absolute;
-		top: -16px;
-    	left: 10%;
+    	left: 8%;
+	}
+	@media @media-device{
+		width: 1000%;
+		max-width: 500px;  
+    	border-top: 0;
+		border-color: rgb(46, 147, 208); 
+		&:before{
+			top: -15px;
+			border-bottom: 16px solid @white;
+		}
+	}
+	@media @media-screen{
+		top: -100%;
+    	box-shadow: none; 
+    	transform: translateY(10%);  
+    	border: 0;
+		&:before{			
+			bottom: -15px;
+			border-top: 16px solid @white;
+		}
+
 	}
 	@media @media-size-xs{
 		width: 90%;

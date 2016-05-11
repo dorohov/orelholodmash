@@ -13,6 +13,12 @@
 	> li{
 		> a{
 			color: lighten(@black, 20%);
+			text-decoration: underline;
+    		transition: @transition-site;
+			&:hover{
+				color: @blue2;
+				text-decoration: none;				
+			}
 		}
 		&.active{
 			> a{

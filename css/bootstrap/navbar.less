@@ -488,11 +488,13 @@
       &:hover,
       &:focus {
         background-color: @navbar-default-link-active-bg;
-        color: @navbar-default-link-active-color;
+        background-color: transparent;
+        color: @white;
+        border-color: @white;
       }
     }
 
-    @media (max-width: @grid-float-breakpoint-max) {
+    /*@media (max-width: @grid-float-breakpoint-max) {
       // Dropdowns get custom display when collapsed
       .open .dropdown-menu {
         > li > a {
@@ -500,7 +502,7 @@
           &:hover,
           &:focus {
             color: @navbar-default-link-hover-color;
-            background-color: @navbar-default-link-hover-bg;
+            background-color: @navbar-default-link-active-bg;
           }
         }
         > .active > a {
@@ -520,7 +522,7 @@
           }
         }
       }
-    }
+    }*/
   }
 
 
