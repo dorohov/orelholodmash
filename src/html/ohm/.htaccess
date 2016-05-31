@@ -1,0 +1,27 @@
+<IfModule mod_headers.c>
+
+<FilesMatch "\.(ico|pdf|flv|woff|woff2|ttf|otf|eot)$">
+Header set Cache-Control "max-age=29030400, public"
+</FilesMatch>
+
+<FilesMatch "\.(jpg|jpeg|png|gif|swf|svg)$">
+Header set Cache-Control "max-age=604800, public"
+</FilesMatch>
+
+<FilesMatch "\.(xml|txt|css|js)$">
+Header set Cache-Control "max-age=604800, proxy-revalidate"
+</FilesMatch>
+
+</IfModule>
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
