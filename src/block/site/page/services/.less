@@ -162,6 +162,13 @@
     	right: 0;
     	bottom: 0px;
     }
+	
+	._srcb__step-item &[aria-expanded="false"] + ._srcb__dropdown-menu {
+		z-index:-1;
+	}
+	._srcb__step-item &[aria-expanded="true"] + ._srcb__dropdown-menu {
+		z-index:1;
+	}
 }
 ._srcb__item-heading{
 	.mixin-headings(
