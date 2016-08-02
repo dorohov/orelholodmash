@@ -35,6 +35,14 @@ if (device.mobile() || device.tablet()) {
 			$(this).removeClass('open');
 		}
 	);
+	$(".product-item").hover(
+		function(){
+			$(this).addClass('hover');
+		},
+		function(){
+			$(this).removeClass('hover');
+		}
+	);
 	$(".navbar-default .dropdown").hover(
 		function(){
 			$(this).addClass('open');
@@ -45,3 +53,25 @@ if (device.mobile() || device.tablet()) {
 	);
 }
 $("nav.navbar-fixed-top").autoHidingNavbar();
+$('._iib__dropdown-menu-flex ul').addClass('_iib__dropdown-menu-note snow-list');
+$('._icb__price-note :first-child').addClass('first');
+
+
+$('.fancybox').fancybox();
+// конструкция для активации fancybox <a class="fancybox-buttons" data-fancybox-group="button" href="" data-title=""><img src="" alt="" /></a>
+$('.fancybox-buttons').fancybox({
+	openEffect  : 'none',
+	closeEffect : 'none',
+	prevEffect : 'none',
+	nextEffect : 'none',
+	closeBtn  : false,
+	helpers : {
+		title : {
+			type : 'inside'
+		},
+		buttons	: {}
+	},
+	afterLoad : function() {
+		this.title = this.title;
+	}
+});

@@ -9,9 +9,26 @@
 				[snp tpl="src/block/site/default/header/.html" class="navbar-site" ]
 			</div> 
 		</header>
-		[snp tpl="src/block/site/page/catalog/_b-content/.html" class="catalog-content-block content-site _second-page__content-site" ]
-
-		[snp tpl="src/block/site/page/catalog/_b-specifications/.html" class="catalog-specifications-block block-shadow" ]
+		<div class="catalog-content-block content-site _second-page__content-site">
+			<div class="container">
+			<ul class="_cb__breadcrumb">
+				<li><a href="/">Главная</a></li>
+				<li class="is-active">Каталог продукции</li>
+			</ul>
+				<div class="heading-block _space-between">
+					<h1 class="heading-site ">Каталог продукции</h1>
+				</div>
+				<div class="_cs__flex">
+					<div class="_cs__col _cs__left">
+						[snp tpl="src/block/site/default/navbar-catalog/.html" ] 
+					</div>
+					<div class="_cs__col _cs__right">
+						[snp tpl="src/block/site/page/catalog/page/.html" ]
+					</div>
+				</div>
+			</div>
+		</div>
+		
 
 		[snp tpl="src/block/site/default/footer/.html" class="footer-site" ]
 

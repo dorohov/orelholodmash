@@ -15,6 +15,7 @@ var h_header = $('.header-site-block').outerHeight(true),
 	$("._srcb__dropdown-menu").css("max-width", w_step_drop);
 if (w_window > 767){
 	$(".calc-block.content-site").css("min-height", h_404);
+	$("._second-page__content-site").css("min-height", h_404);
 } else {
 	$(".calc-block.content-site").removeAttr("style");
 };

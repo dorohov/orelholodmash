@@ -121,7 +121,7 @@
 ._icb__price-note{
 	margin-top: 5px;
 	margin-bottom: 22px;
-	span{			
+	/*span{			
 		.mixin-headings(
 			@font-family: @agora-bold, 
 			@font-size: 73px, 
@@ -130,10 +130,42 @@
 		);
     	float: left;
 		margin-right: 10px;
-	}
-	div, p{
+	}*/
+	div{
 		margin-bottom: 10px;
+		&.first{
+			&::first-letter{	
+				font-family: @agora-bold; 
+				font-size: 73px; 
+				line-height: 65px; 
+				color: #0370af;
+		    	float: left;
+				margin-right: 10px;
+			}
+		}
 	}
+	p{
+		margin-bottom: 10px;
+		&.first{
+			&::first-letter{	
+				font-family: @agora-bold; 
+				font-size: 73px; 
+				line-height: 65px; 
+				color: #0370af;
+		    	float: left;
+				margin-right: 10px;
+			}
+		}
+	}
+	/*
+	&::first-letter{	
+		font-family: @agora-bold; 
+		font-size: 73px; 
+		line-height: 65px; 
+		color: #0370af;
+    	float: left;
+		margin-right: 10px;
+	}*/
 }
 ._icb__price-btn{
 	max-width: 300px;

@@ -9,7 +9,8 @@
 @helvetica-rom:		HelveticaNeueLTStd-Roman;
 
 @icon: 				Flaticon;
-.include-custom-font(@family: @agora-reg, @weight: normal, @style: normal){
+@icon-ar: 			icon;
+/*.include-custom-font(@family: @agora-reg, @weight: normal, @style: normal){
 	@font-face{			
 		font-family: "@{family}";			
 		src:url('@{url-path-fonts}/@{family}.eot');
@@ -17,6 +18,14 @@
 			url('@{url-path-fonts}/@{family}.woff') format('woff'),
 			url('@{url-path-fonts}/@{family}.ttf') format('truetype'),
 			url('@{url-path-fonts}/@{family}.svg#icon') format('svg');
+		font-weight: @weight;
+		font-style: @style;		
+	}
+}*/
+.include-custom-font(@family: @agora-reg, @weight: normal, @style: normal){
+	@font-face{			
+		font-family: "@{family}";			
+		src: url('@{url-path-fonts}/@{family}.woff') format('woff');
 		font-weight: @weight;
 		font-style: @style;		
 	}
@@ -32,6 +41,7 @@
 .include-custom-font(@family: @din-med, @weight: normal, @style: normal);
 .include-custom-font(@family: @helvetica-rom, @weight: normal, @style: normal);
 .include-custom-font(@family: @icon, @weight: normal, @style: normal);
+.include-custom-font(@family: @icon-ar, @weight: normal, @style: normal);
  
 .mixin-headings(@font-family: @agora-reg, @font-size: 20px, @line-height: 26px, @color: @black){
 	font-family: @font-family;
@@ -64,3 +74,7 @@
 @icon-user: 			"\f116";
 @icon-vk: 				"\f117";
 @icon-warning: 			"\f118";
+
+
+@icon-back: 			"\f100";
+@icon-next: 			"\f101";
