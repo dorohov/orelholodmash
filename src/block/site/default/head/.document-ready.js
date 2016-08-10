@@ -75,3 +75,10 @@ $('.fancybox-buttons').fancybox({
 		this.title = this.title;
 	}
 });
+$('._cat-item__table').fixedHeaderTable({
+	autoShow: true,
+	height: 500,  
+	footer: false, 
+	cloneHeadToFoot: false, 
+	fixedColumn: false 
+});
