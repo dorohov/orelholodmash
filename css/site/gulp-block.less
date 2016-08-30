@@ -552,19 +552,23 @@
 
 /* @end */ 
 ._cat-item__table{
-	overflow-x: auto;
+	overflow-x: hidden;
 	overflow-y: auto;
 	color: lighten(@black, 20%);
+	max-width:100%;
+	width:100%;
 	th, td{
-		padding: 5px 7px; 
+		padding: 3px 1px; 
 		border: 1px solid @blue;
+		text-align:center !important;
+		vertical-align:middle !important;
 	}
 	thead{
 		th, td{
 			text-align: center;
 			font-family: @agora-bold;
-			font-size: 14px;
-			line-height: 18px;
+			font-size: 13px;
+			line-height: 15px;
 		}
 		tr{
 			&:nth-child(2){
@@ -2419,6 +2423,9 @@ h3._aicb__more-heading{
 }
 ._cip__option-preview{
 	margin-bottom: 15px;
+	font-size: 1.1em;
+	line-height: 1.5em;
+	color: black;
 }
 ._cip__option-item-heading{
 	a{
