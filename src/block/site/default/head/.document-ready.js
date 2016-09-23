@@ -75,6 +75,7 @@ $('.fancybox-buttons').fancybox({
 		this.title = this.title;
 	}
 });
+/*
 $('._cat-item__table').fixedHeaderTable({
 	autoShow: true,
 	height: 500,  
@@ -82,3 +83,4 @@ $('._cat-item__table').fixedHeaderTable({
 	cloneHeadToFoot: false, 
 	fixedColumn: false 
 });
+*/
